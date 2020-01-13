@@ -1,0 +1,10 @@
+<div class="container" *ngIf="quote">
+  <div class="card">
+    <header class="card-header bg-info">
+      {{ quote.dialog }}
+    </header>
+    <main class="card-body">
+         <a class="btn btn-primary" routerLink="/personnage-details/{{quote.character}}">Découvrez de quel personnage tient cette citation</a>
+    </main>
+  </div>
+</div>

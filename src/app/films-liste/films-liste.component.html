@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-3" *ngFor="let film of films">
+        <div class="card">
+            <header class="card-header bg-info" >
+                {{film.name}}
+            </header>
+            <main class="card-body" >
+                <h6>Durée en minutes <span class="badge badge-secondary"> {{film.runtimeInMinutes}}</span></h6>
+            </main>
+        </div>
+    </div>
+</div>

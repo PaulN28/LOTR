@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search.." />
+  </div>
+  <div class="row">
+    <div
+      class="col-sm-12 col-md-4 col-lg-3"
+      *ngFor="let personnage of personnages">
+      <div class="card"> 
+        <header class="card-header bg-info">
+          {{ personnage.name }}
+        </header>
+        <main class="card-body">
+           <p>{{ personnage.race }}</p>
+          <a routerLink="/personnage-details/{{ personnage._id }}" href="#"
+            >En apprendre plus ...</a
+          >
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- *ngFor="let personnage_name of personnages_name | filter : searchText" Filtre ne fonctionnant pas--> 

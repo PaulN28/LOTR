@@ -1,0 +1,21 @@
+<div class="container" *ngIf="personnage">
+  <div class="card">
+    <header class="card-header bg-info">
+      {{ personnage.name }}
+    </header>
+    <main class="card-body">
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item">Race : {{ personnage.race }}</li>
+        <li class="list-group-item">Faction : {{ personnage.realm }}</li>
+        <li class="list-group-item">Genre : {{ personnage.gender }}</li>
+        <li class="list-group-item">Naissance : {{ personnage.birth }}</li>
+        <li class="list-group-item">Mort : {{ personnage.death }}</li>
+        <li *ngFor="let quote of quotes">
+          <a routerLink="../../quote-details/{{ quote._id }}" href="#">{{
+            quote.dialog
+          }}</a>
+        </li>
+      </ul>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="form-group">
+<form (ngSubmit)="onSubmitForm()"> <!-- Utilisation de ngModel et ngSubmit pour traiter le formulaire -->
+      <input type="text" name="name" class="form-control" placeholder="Votre nom"  [(ngModel)]="name">
+
+    <div class="field">
+        <input type="text" name="first_name" class="form-control" placeholder="Votre nom" [(ngModel)]="first_name">
+      </div>
+
+    <div class="field">
+      <input type="email" name="email" class="form-control" placeholder="Votre adresse email" [(ngModel)]="email">
+    </div>
+  
+    <div class="field">
+      <textarea class="form-control" name="message" placeholder="Que pensez-vous de notre site?" [(ngModel)]="message"></textarea>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div id = "alert" class="alert alert-primary" role="alert">
+  Ici se trouve vos informations.
+</div>
